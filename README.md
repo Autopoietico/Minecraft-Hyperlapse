@@ -9,5 +9,7 @@ This tool gives you a command to initial position and  a command for a command b
 Contact and additional links:
 
 Email: autopoietico@outlook.com
+
 Twitter: https://twitter.com/AutopoieticoLP
+
 Youtube: https://www.youtube.com/user/SrAutopoietico/
