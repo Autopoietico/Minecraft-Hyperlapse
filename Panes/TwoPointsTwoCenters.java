@@ -21,7 +21,7 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         initComponents();
     }
 
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -226,16 +226,16 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         jTxtField_Minutes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTxtField_Minutes.setText("0");
         add(jTxtField_Minutes, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 84, -1));
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jBut_CopyComandCommandBlockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_CopyComandCommandBlockActionPerformed
+    private void jBut_CopyComandCommandBlockActionPerformed(java.awt.event.ActionEvent evt) {
 
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(this.jTxtField_ComandCommandBlock.getText());
         cb.setContents(ss, ss);
-    }//GEN-LAST:event_jBut_CopyComandCommandBlockActionPerformed
+    }
 
-    private void jBut_GenerateComandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_GenerateComandsActionPerformed
+    private void jBut_GenerateComandsActionPerformed(java.awt.event.ActionEvent evt) {
 
         int days, hours, minutes, ticks;
         double x1, y1, z1, x2, y2, z2, xC1, yC1, zC1, xC2, yC2, zC2;
@@ -290,17 +290,17 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(null, "Uno de los valores ingresados no es un numero");
         }
-    }//GEN-LAST:event_jBut_GenerateComandsActionPerformed
+    }
 
-    private void jBut_CopyInitialCommandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_CopyInitialCommandActionPerformed
+    private void jBut_CopyInitialCommandActionPerformed(java.awt.event.ActionEvent evt) {
 
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(this.jTxtField_InitialCommand.getText());
         cb.setContents(ss, ss);
-    }//GEN-LAST:event_jBut_CopyInitialCommandActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
     private javax.swing.JButton jBut_CopyComandCommandBlock;
     private javax.swing.JButton jBut_CopyInitialCommand;
     private javax.swing.JButton jBut_GenerateComands;
@@ -345,5 +345,5 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
     private javax.swing.JTextField jTxtField_Z2;
     private javax.swing.JTextField jTxtField_ZC1;
     private javax.swing.JTextField jTxtField_ZC2;
-    // End of variables declaration//GEN-END:variables
+    
 }
