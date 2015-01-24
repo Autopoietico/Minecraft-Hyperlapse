@@ -22,7 +22,7 @@ public class GUI extends javax.swing.JFrame {
         frame = this.getSize();
         this.setLocation(((screen.width - frame.width) / 2), (screen.height - frame.height) / 2);
     }
-    
+	
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -37,19 +37,19 @@ public class GUI extends javax.swing.JFrame {
         jMenuItem_About = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("null");
+        setTitle("Minecraft Hyperlapse");
         setResizable(false);
 
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPane1.setName("");
-        jTabbedPane1.addTab("Dos Puntos, Dos Centros", twoPoints);
-        jTabbedPane1.addTab("Un Punto, Dos Centros", onePointTwoCenters);
-        jTabbedPane1.addTab("Dos Puntos, Un Centro", twoPointsOneCenter);
-        jTabbedPane1.addTab("Dos Puntos, Dos Centros", twoPointsTwoCenters);
+        jTabbedPane1.addTab("Two Points", twoPoints);
+        jTabbedPane1.addTab("One Point, Two Centers", onePointTwoCenters);
+        jTabbedPane1.addTab("Two Points, One Center", twoPointsOneCenter);
+        jTabbedPane1.addTab("Two Points, Two Centers", twoPointsTwoCenters);
 
-        jMenu_File.setText("Archivo");
+        jMenu_File.setText("File");
 
-        jMenuItem_Exit.setText("Salir");
+        jMenuItem_Exit.setText("Exit");
         jMenuItem_Exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem_ExitActionPerformed(evt);
@@ -59,9 +59,9 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu_File);
 
-        jMenu_Help.setText("Ayuda");
+        jMenu_Help.setText("Exit");
 
-        jMenuItem_About.setText("Acerca de");
+        jMenuItem_About.setText("About");
         jMenuItem_About.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem_AboutActionPerformed(evt);
@@ -87,12 +87,12 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }
 
-    private void jMenuItem_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ExitActionPerformed
+    private void jMenuItem_ExitActionPerformed(java.awt.event.ActionEvent evt) {
 
         System.exit(0);
     }
 
-    private void jMenuItem_AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AboutActionPerformed
+    private void jMenuItem_AboutActionPerformed(java.awt.event.ActionEvent evt) {
 
         About about = new About(this, true);
         about.setVisible(true);
@@ -123,7 +123,6 @@ public class GUI extends javax.swing.JFrame {
         });
     }
 
-    
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem_About;
     private javax.swing.JMenuItem jMenuItem_Exit;
@@ -134,5 +133,4 @@ public class GUI extends javax.swing.JFrame {
     private Panes.TwoPoints twoPoints;
     private Panes.TwoPointsOneCenter twoPointsOneCenter;
     private Panes.TwoPointsTwoCenters twoPointsTwoCenters;
-    
 }

@@ -43,11 +43,11 @@ public class About extends javax.swing.JDialog {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Creado Por Autopoietico");
+        jLabel1.setText("Made for Autopoietico");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 250, 20));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Minecraft Hyperlapse Creador de Comandos");
+        jLabel2.setText("Minecraft Hyperlapse, Command Creator");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 20));
 
         jLabel3.setText("Github: Autopoietico");

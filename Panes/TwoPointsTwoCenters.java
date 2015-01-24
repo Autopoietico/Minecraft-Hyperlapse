@@ -1,12 +1,13 @@
 /*
  Minecraft Hyperlapse Command Creator V1.0
 
- Creado por Autopoietico:
+ Create by Autopoietico:
 
  Github: https://github.com/Autopoietico
  Twitter: https://twitter.com/AutopoieticoLP
  Youtube: https://www.youtube.com/user/SrAutopoietico/
  */
+
 package Panes;
 
 import cod.Calc;
@@ -21,7 +22,6 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         initComponents();
     }
 
-    
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -73,18 +73,18 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Dos Puntos, Dos Centros");
+        jLabel1.setText("Two Point, Two Centers");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 304, -1));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 286, 304, 10));
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Comando para teletransportar a la posición inicial");
+        jLabel14.setText("Teleporting to Initial Position, Command:");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 302, 304, -1));
 
         jTxtField_InitialCommand.setEditable(false);
         add(jTxtField_InitialCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 322, 304, 27));
 
-        jBut_CopyInitialCommand.setText("Copiar al Portapapeles");
+        jBut_CopyInitialCommand.setText("Copy to Clipboard");
         jBut_CopyInitialCommand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_CopyInitialCommandActionPerformed(evt);
@@ -92,7 +92,7 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         });
         add(jBut_CopyInitialCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 355, 304, -1));
 
-        jBut_CopyComandCommandBlock.setText("Copiar al Portapapeles");
+        jBut_CopyComandCommandBlock.setText("Copy to Clipboard");
         jBut_CopyComandCommandBlock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_CopyComandCommandBlockActionPerformed(evt);
@@ -101,29 +101,29 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         add(jBut_CopyComandCommandBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 435, 304, -1));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Comando para el bloque de comandos");
+        jLabel15.setText("CommandBlock, Command:");
         add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 389, 304, -1));
 
         jTxtField_ComandCommandBlock.setEditable(false);
         add(jTxtField_ComandCommandBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 409, 304, -1));
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Este bloque de comandos se debe activar con un");
+        jLabel16.setText(" This command block must be activated with a");
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 469, 304, -1));
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("reloj de hoppers simple para funcionar correctamente.");
+        jLabel17.setText("simple hopper clock to run correctly");
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 489, 304, -1));
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Nick de Minecraft:");
+        jLabel18.setText("Minecraft Nick:");
         add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 324, -1));
 
         jTxtField_MinecraftNick.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTxtField_MinecraftNick.setText("@p[m=3]");
         add(jTxtField_MinecraftNick, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 214, 304, -1));
 
-        jBut_GenerateComands.setText("Generar Comandos");
+        jBut_GenerateComands.setText("Generate");
         jBut_GenerateComands.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_GenerateComandsActionPerformed(evt);
@@ -206,13 +206,13 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         jTxtField_XC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         add(jTxtField_XC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 43, 40, -1));
 
-        jLabel2.setText("Días:");
+        jLabel2.setText("Days:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        jLabel3.setText("Minutos:");
+        jLabel3.setText("Minutes:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, -1, -1));
 
-        jLabel4.setText("Horas:");
+        jLabel4.setText("Hours:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
 
         jTxtField_Hours.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -251,7 +251,7 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
 
             if (ticks == 0) {
 
-                JOptionPane.showMessageDialog(null, "Los valores de tiempo no pueden ser todos 0");
+                JOptionPane.showMessageDialog(null, "Time values can not all be 0");
             } else {
 
                 x1 = Integer.parseInt(this.jTxtField_X1.getText()) + 0.5;
@@ -288,7 +288,7 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
 
         } catch (NumberFormatException nfe) {
 
-            JOptionPane.showMessageDialog(null, "Uno de los valores ingresados no es un numero");
+            JOptionPane.showMessageDialog(null, "One of the values entered is not a number");
         }
     }
 
@@ -299,8 +299,6 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
         cb.setContents(ss, ss);
     }
 
-
-    
     private javax.swing.JButton jBut_CopyComandCommandBlock;
     private javax.swing.JButton jBut_CopyInitialCommand;
     private javax.swing.JButton jBut_GenerateComands;
@@ -345,5 +343,4 @@ public class TwoPointsTwoCenters extends javax.swing.JPanel {
     private javax.swing.JTextField jTxtField_Z2;
     private javax.swing.JTextField jTxtField_ZC1;
     private javax.swing.JTextField jTxtField_ZC2;
-    
 }
