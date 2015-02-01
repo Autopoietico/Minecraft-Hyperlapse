@@ -14,6 +14,10 @@ import cod.Calc;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 
 public class OnePointTwoCenters extends javax.swing.JPanel {
@@ -22,6 +26,7 @@ public class OnePointTwoCenters extends javax.swing.JPanel {
         initComponents();
     }
 
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -202,21 +207,24 @@ public class OnePointTwoCenters extends javax.swing.JPanel {
         jTxtField_Minutes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTxtField_Minutes.setText("0");
         add(jTxtField_Minutes, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 84, -1));
-    }
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void jBut_CopyComandCommandBlockActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jBut_CopyComandCommandBlockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_CopyComandCommandBlockActionPerformed
 
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(this.jTxtField_ComandCommandBlock.getText());
         cb.setContents(ss, ss);
-    }
+    }//GEN-LAST:event_jBut_CopyComandCommandBlockActionPerformed
 
-    private void jBut_GenerateComandsActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jBut_GenerateComandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_GenerateComandsActionPerformed
 
         int days, hours, minutes, ticks;
         double x1, y1, z1, xC1, yC1, zC1, xC2, yC2, zC2;
         String nick;
         double iAH, iAV, dAH, dAV;
+        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
+        otherSymbols.setDecimalSeparator('.');
+        DecimalFormat formatter = new DecimalFormat("#.################################", otherSymbols);
 
         try {
             minutes = Integer.parseInt(this.jTxtField_Minutes.getText());
@@ -252,25 +260,25 @@ public class OnePointTwoCenters extends javax.swing.JPanel {
                 dAH = Calc.convertRadiansToDegrees(Calc.getHorizontalAngle2Points2Centers(x1, z1, xC1, zC1, xC2, zC2)) / ticks;
                 dAV = Calc.convertRadiansToDegrees(Calc.getVerticalAngle2Points2Centers(x1, y1, z1, xC1, yC1, zC1, xC1, yC2, zC2)) / ticks;
 
-                this.jTxtField_InitialCommand.setText("/tp " + nick + " " + x1 + " " + y1 + " " + z1 + " " + iAH + " " + iAV);
-                this.jTxtField_ComandCommandBlock.setText("tp " + nick + " ~ ~ ~ ~" + dAH + " ~" + dAV);
+                this.jTxtField_InitialCommand.setText("/tp " + nick + " " + x1 + " " + y1 + " " + z1 + " " + formatter.format(iAH) + " " + formatter.format(iAV));
+                this.jTxtField_ComandCommandBlock.setText("tp " + nick + " ~ ~ ~ ~" + formatter.format(dAH) + " ~" + formatter.format(dAV));
             }
 
         } catch (NumberFormatException nfe) {
 
             JOptionPane.showMessageDialog(null, "One of the values entered is not a number");
         }
-    }
+    }//GEN-LAST:event_jBut_GenerateComandsActionPerformed
 
-    private void jBut_CopyInitialCommandActionPerformed(java.awt.event.ActionEvent evt) 
+    private void jBut_CopyInitialCommandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_CopyInitialCommandActionPerformed
 
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(this.jTxtField_InitialCommand.getText());
         cb.setContents(ss, ss);
-    }
+    }//GEN-LAST:event_jBut_CopyInitialCommandActionPerformed
 
 
-    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBut_CopyComandCommandBlock;
     private javax.swing.JButton jBut_CopyInitialCommand;
     private javax.swing.JButton jBut_GenerateComands;
@@ -309,4 +317,5 @@ public class OnePointTwoCenters extends javax.swing.JPanel {
     private javax.swing.JTextField jTxtField_Z1;
     private javax.swing.JTextField jTxtField_ZC1;
     private javax.swing.JTextField jTxtField_ZC2;
+    // End of variables declaration//GEN-END:variables
 }

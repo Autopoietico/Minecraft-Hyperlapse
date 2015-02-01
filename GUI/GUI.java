@@ -1,7 +1,7 @@
 /*
  Minecraft Hyperlapse Command Creator V1.0
 
- Creado por Autopoietico:
+ Create by Autopoietico:
 
  Github: https://github.com/Autopoietico
  Twitter: https://twitter.com/AutopoieticoLP
@@ -22,7 +22,7 @@ public class GUI extends javax.swing.JFrame {
         frame = this.getSize();
         this.setLocation(((screen.width - frame.width) / 2), (screen.height - frame.height) / 2);
     }
-	
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -41,7 +41,7 @@ public class GUI extends javax.swing.JFrame {
         setResizable(false);
 
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        jTabbedPane1.setName("");
+        jTabbedPane1.setName(""); // NOI18N
         jTabbedPane1.addTab("Two Points", twoPoints);
         jTabbedPane1.addTab("One Point, Two Centers", onePointTwoCenters);
         jTabbedPane1.addTab("Two Points, One Center", twoPointsOneCenter);
@@ -85,18 +85,18 @@ public class GUI extends javax.swing.JFrame {
         );
 
         pack();
-    }
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem_ExitActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jMenuItem_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ExitActionPerformed
 
         System.exit(0);
-    }
+    }//GEN-LAST:event_jMenuItem_ExitActionPerformed
 
-    private void jMenuItem_AboutActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jMenuItem_AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AboutActionPerformed
 
         About about = new About(this, true);
         about.setVisible(true);
-    }
+    }//GEN-LAST:event_jMenuItem_AboutActionPerformed
 
     public static void main(String args[]) {
 
@@ -123,6 +123,7 @@ public class GUI extends javax.swing.JFrame {
         });
     }
 
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem_About;
     private javax.swing.JMenuItem jMenuItem_Exit;
@@ -133,4 +134,5 @@ public class GUI extends javax.swing.JFrame {
     private Panes.TwoPoints twoPoints;
     private Panes.TwoPointsOneCenter twoPointsOneCenter;
     private Panes.TwoPointsTwoCenters twoPointsTwoCenters;
+    // End of variables declaration//GEN-END:variables
 }

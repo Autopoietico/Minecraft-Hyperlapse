@@ -1,7 +1,7 @@
 /*
  Minecraft Hyperlapse Command Creator V1.0
 
- Creado por Autopoietico:
+ Create by Autopoietico:
 
  Github: https://github.com/Autopoietico
  Twitter: https://twitter.com/AutopoieticoLP
@@ -30,6 +30,7 @@ public class About extends javax.swing.JDialog {
         cuadro = this.getSize();
         this.setLocation(((pantalla.width - cuadro.width) / 2), (pantalla.height - cuadro.height) / 2);
     }
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -60,11 +61,13 @@ public class About extends javax.swing.JDialog {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 230, -1));
 
         pack();
-    }
-	
+    }// </editor-fold>//GEN-END:initComponents
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    // End of variables declaration//GEN-END:variables
 }
