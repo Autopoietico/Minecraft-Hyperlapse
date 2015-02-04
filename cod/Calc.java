@@ -1,7 +1,7 @@
 /*
  Minecraft Hyperlapse Command Creator V1.0
 
- Create by Autopoietico:
+ Creado por Autopoietico:
 
  Github: https://github.com/Autopoietico
  Twitter: https://twitter.com/AutopoieticoLP
