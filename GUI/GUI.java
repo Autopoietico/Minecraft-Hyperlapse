@@ -59,7 +59,7 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu_File);
 
-        jMenu_Help.setText("Exit");
+        jMenu_Help.setText("Help");
 
         jMenuItem_About.setText("About");
         jMenuItem_About.addActionListener(new java.awt.event.ActionListener() {
