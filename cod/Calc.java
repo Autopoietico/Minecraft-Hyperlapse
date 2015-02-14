@@ -1,5 +1,5 @@
 /*
- Minecraft Hyperlapse Command Creator V1.0
+ Minecraft Hyperlapse Command Creator V1.1
 
  Create by Autopoietico:
 
@@ -12,19 +12,34 @@ package cod;
 
 public class Calc {
 
-    public static int getHopperTicks(int days, int hours, int minutes) {
+    public static int getHopperClockTicks(int days, int hours, int minutes) {
 
         int totalHours, totalMinutes;
 
-        double hopperTicks;
+        double hopperClockTicks;
 
         totalHours = days * 24 + hours;
 
         totalMinutes = (totalHours * 60) + minutes;
 
-        hopperTicks = totalMinutes * 80;
+        hopperClockTicks = totalMinutes * 80;
 
-        return (int) hopperTicks;
+        return (int) hopperClockTicks;
+    }
+    
+    public static int getCommandBlockClockTicks(int days, int hours, int minutes) {
+
+        int totalHours, totalMinutes;
+
+        double commandBlockClockTicks;
+
+        totalHours = days * 24 + hours;
+
+        totalMinutes = (totalHours * 60) + minutes;
+
+        commandBlockClockTicks = totalMinutes * 1200;
+
+        return (int) commandBlockClockTicks;
     }
 
     public static double getDistanceBetweenTwoPoints2D(double x1, double z1, double x2, double z2) {

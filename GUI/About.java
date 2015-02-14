@@ -1,5 +1,5 @@
 /*
- Minecraft Hyperlapse Command Creator V1.0
+ Minecraft Hyperlapse Command Creator V1.1
 
  Create by Autopoietico:
 

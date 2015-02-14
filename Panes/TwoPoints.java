@@ -1,5 +1,5 @@
 /*
- Minecraft Hyperlapse Command Creator V1.0
+ Minecraft Hyperlapse Command Creator V1.1
 
  Create by Autopoietico:
 
@@ -7,10 +7,10 @@
  Twitter: https://twitter.com/AutopoieticoLP
  Youtube: https://www.youtube.com/user/SrAutopoietico/
  */
-
 package Panes;
 
 import cod.Calc;
+import cod.Formatter;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -37,8 +37,6 @@ public class TwoPoints extends javax.swing.JPanel {
         jBut_CopyComandCommandBlock = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jTxtField_ComandCommandBlock = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jTxtField_MinecraftNick = new javax.swing.JTextField();
         jBut_GenerateComands = new javax.swing.JButton();
@@ -60,6 +58,8 @@ public class TwoPoints extends javax.swing.JPanel {
         jTxtField_Hours = new javax.swing.JTextField();
         jTxtField_Days = new javax.swing.JTextField();
         jTxtField_Minutes = new javax.swing.JTextField();
+        jComboBox_ClockType = new javax.swing.JComboBox();
+        jLabel5 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(330, 443));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,14 +98,6 @@ public class TwoPoints extends javax.swing.JPanel {
 
         jTxtField_ComandCommandBlock.setEditable(false);
         add(jTxtField_ComandCommandBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 409, 304, -1));
-
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText(" This command block must be activated with a");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 469, 304, -1));
-
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("simple hopper clock to run correctly");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 489, 304, -1));
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Minecraft Nick:");
@@ -179,6 +171,13 @@ public class TwoPoints extends javax.swing.JPanel {
         jTxtField_Minutes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTxtField_Minutes.setText("0");
         add(jTxtField_Minutes, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 84, -1));
+
+        jComboBox_ClockType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hopper Clock", "CommandBlock Clock" }));
+        add(jComboBox_ClockType, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 300, -1));
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Type of Clock:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 300, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBut_CopyComandCommandBlockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_CopyComandCommandBlockActionPerformed
@@ -194,16 +193,20 @@ public class TwoPoints extends javax.swing.JPanel {
         double x1, y1, z1, x2, y2, z2;
         String nick;
         double dx, dy, dz;
-        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
-        otherSymbols.setDecimalSeparator('.');
-        DecimalFormat formatter = new DecimalFormat("#.################################", otherSymbols);
 
         try {
             minutes = Integer.parseInt(this.jTxtField_Minutes.getText());
             hours = Integer.parseInt(this.jTxtField_Hours.getText());
             days = Integer.parseInt(this.jTxtField_Days.getText());
 
-            ticks = Calc.getHopperTicks(days, hours, minutes);
+            if (this.jComboBox_ClockType.getSelectedIndex() == 0) {
+                ticks = Calc.getHopperClockTicks(days, hours, minutes);
+                System.out.println("Hopper");
+            } else {
+
+                ticks = Calc.getCommandBlockClockTicks(days, hours, minutes);
+                System.out.println("CommandBlock");
+            }
 
             if (ticks == 0) {
 
@@ -229,7 +232,7 @@ public class TwoPoints extends javax.swing.JPanel {
                 dz = (z2 - z1) / ticks;
 
                 this.jTxtField_InitialCommand.setText("/tp " + nick + " " + x1 + " " + y1 + " " + z1);
-                this.jTxtField_ComandCommandBlock.setText("tp " + nick + " ~" + formatter.format(dx) + " ~" + formatter.format(dy) + " ~" + formatter.format(dz));
+                this.jTxtField_ComandCommandBlock.setText("tp " + nick + " ~" + Formatter.format(dx) + " ~" + Formatter.format(dy) + " ~" + Formatter.format(dz));
             }
 
         } catch (NumberFormatException nfe) {
@@ -250,11 +253,10 @@ public class TwoPoints extends javax.swing.JPanel {
     private javax.swing.JButton jBut_CopyComandCommandBlock;
     private javax.swing.JButton jBut_CopyInitialCommand;
     private javax.swing.JButton jBut_GenerateComands;
+    private javax.swing.JComboBox jComboBox_ClockType;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -265,6 +267,7 @@ public class TwoPoints extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTxtField_ComandCommandBlock;
     private javax.swing.JTextField jTxtField_Days;

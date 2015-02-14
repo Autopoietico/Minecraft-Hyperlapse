@@ -1,5 +1,5 @@
 /*
- Minecraft Hyperlapse Command Creator V1.0
+ Minecraft Hyperlapse Command Creator V1.1
 
  Create by Autopoietico:
 
@@ -81,7 +81,7 @@ public class GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
         );
 
         pack();
